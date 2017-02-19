@@ -1,0 +1,12 @@
+# OS generated files
+.DS_Store
+Icon?
+Thumbs.db
+
+# Project Files
+.tmp
+.env
+node_modules/
+tmp/
+*.log
+wallaby.js

@@ -1,0 +1,4 @@
+--compilers js:babel-register
+--require ./src/__tests__/setup.js
+--reporter dot
+./src/**/*test.js
