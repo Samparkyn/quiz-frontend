@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-import '../../styles/quiz.css';
+import '../../../styles/quiz.css';
 
-export default class Quiz extends Component {
+export default class WelcomeScreen extends Component {
   static propTypes = {
     
   }
   
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
-      <div className="quiz">
+      <div className="ui-box quiz">
         <h1>Welcome to the Cash Flow Quiz!</h1>
         <p>What is your name?</p>
         <input></input>

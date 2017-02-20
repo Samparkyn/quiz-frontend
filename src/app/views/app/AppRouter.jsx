@@ -2,7 +2,8 @@
 
 import React, { PropTypes, Component }  from 'react';
 import { Router, Route } from 'react-router';
-import Quiz from '../../components/Quiz/Quiz';
+import WelcomeScreen from '../../components/Quiz/components/WelcomeScreen';
+import Question from '../../components/Quiz/components/Question';
 
 import AppBody from './AppBody';
 
@@ -24,7 +25,8 @@ export default class AppRouter extends Component {
     return (
       <Router history={history}>
         <Route path="/" component={AppBody}>
-          <Route path="/quiz" component={Quiz} />
+          <Route path="/quiz" component={WelcomeScreen} />
+          <Route path="/quiz/question/:id" component={Question} />
         </Route>
       </Router>
     );

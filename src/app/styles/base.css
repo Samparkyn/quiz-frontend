@@ -16,18 +16,20 @@ body {
 }
 
 #root {
-  display: flex;
-  justify-content: center;
-  height: 30vh;
   width: 55vw;
   left: 0;
   right: 0;
-  bottom: 0;
-  top: -15vh;
+  top: 30%;
   position: absolute;
   margin: auto;
+}
+
+.ui-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 25px;
   background-color: #F0F8FF;
-  box-shadow: 3px 3px 10px #888888;
-  
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
