@@ -75,7 +75,7 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      title: 'Good luck',
+      title: 'Cash Quiz',
       inject: 'body'
     })
   ],

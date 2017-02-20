@@ -1,6 +1,8 @@
 
 html {
   font-size: var(--font-size-base);
+  height: 100%;
+  width: 100%;
 }
 
 body {
@@ -8,10 +10,24 @@ body {
   background-color: var(--body-color);
   font-family: var(--sans-serif-font);
   font-size: 1rem;
-  margin: 2rem;
+  height: 100%;
   padding: 0;
+  margin: 0;
 }
 
 #root {
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+  width: 55vw;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: -15vh;
+  position: absolute;
+  margin: auto;
+  padding: 25px;
+  background-color: #F0F8FF;
+  box-shadow: 3px 3px 10px #888888;
   
 }
