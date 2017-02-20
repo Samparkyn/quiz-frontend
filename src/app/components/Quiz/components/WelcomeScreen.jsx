@@ -1,9 +1,19 @@
-import React, { Component } from 'react';
-import '../../../styles/quiz.css';
+import React, { PropTypes, Component } from 'react';
+import { startQuiz, getQuestions } from '../state/actions';
+import { connect } from 'react-redux';
 
-export default class WelcomeScreen extends Component {
+export class WelcomeScreen extends Component {
   static propTypes = {
-    
+    dispatch: PropTypes.func
+  }
+  
+  componentWillMount() {
+    this.props.dispatch(getQuestions());
+  }
+  
+  clickHandler = () => {
+    const value = this.refs.name.value;
+    this.props.dispatch(startQuiz(value));
   }
   
   render() {
@@ -11,9 +21,11 @@ export default class WelcomeScreen extends Component {
       <div className="ui-box quiz">
         <h1>Welcome to the Cash Flow Quiz!</h1>
         <p>What is your name?</p>
-        <input></input>
-        <button className="nxt-btn">Next</button>
+        <input ref="name"></input>
+        <button className="nxt-btn" onClick={this.clickHandler}>Next</button>
       </div>
     );
   }
 }
+
+export default connect()(WelcomeScreen);

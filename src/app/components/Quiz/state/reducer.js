@@ -2,20 +2,20 @@ import * as types from './action-types';
 
 const initialState = {
   questions: [],
-  answers: {},
+  scores: [],
   playerName: '',
-  score: 0,
+  currentScore: 0,
   currentQuestion: 0,
   status: '',
   error: ''
 };
 
-export default function reducer(state = initialState, action = {}) {
+export default function QuizReducer(state = initialState, action = {}) {
   switch (action.type) {
   case types.QUESTIONS_REQUEST:
     {
       return Object.assign({}, state, {
-          
+        status: 'requesting questions'
       });
     }
     
@@ -23,7 +23,10 @@ export default function reducer(state = initialState, action = {}) {
   case types.QUESTIONS_SUCCESS:
     {
       return Object.assign({}, state, {
-          
+        questions: action.data.questions,
+        scores: action.data.scores,
+        status: '',
+        error: ''
       });
     }
     
@@ -31,7 +34,8 @@ export default function reducer(state = initialState, action = {}) {
   case types.QUESTIONS_FAILURE:
     {
       return Object.assign({}, state, {
-          
+        status: 'error',
+        error: action.data
       });
     }
     
@@ -39,23 +43,19 @@ export default function reducer(state = initialState, action = {}) {
   case types.START_QUIZ:
     {
       return Object.assign({}, state, {
-          
+        playerName: action.data,
+        currentScore: 0
       });
     }
 
 
   case types.NEXT_QUESTION:
     {
+      const answer = action.data;
+      const score = state.scores[answer];
       return Object.assign({}, state, {
-          
-      });
-    }
-
-
-  case types.SHOW_RESULTS:
-    {
-      return Object.assign({}, state, {
-          
+        currentQuestion: state.currentQuestion + 1,
+        currentScore: state.currentScore + score
       });
     }
     
