@@ -5,7 +5,6 @@ const initialState = {
   scores: [],
   playerName: '',
   currentScore: 0,
-  currentQuestion: 0,
   status: '',
   error: ''
 };
@@ -54,10 +53,12 @@ export default function QuizReducer(state = initialState, action = {}) {
       const answer = action.data;
       const score = state.scores[answer];
       return Object.assign({}, state, {
-        currentQuestion: state.currentQuestion + 1,
         currentScore: state.currentScore + score
       });
     }
+    
+  case types.RESET_GAME:
+    return initialState;
     
   default: return state;
   }

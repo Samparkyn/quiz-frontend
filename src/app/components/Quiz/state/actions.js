@@ -54,3 +54,9 @@ export function nextQuestion(data) {
     type: types.NEXT_QUESTION
   };
 }
+
+export function resetGame() {
+  return {
+    type: types.RESET_GAME
+  };
+}

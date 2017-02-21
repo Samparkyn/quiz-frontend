@@ -3,3 +3,4 @@ export const QUESTIONS_SUCCESS = 'QUESTIONS_SUCCESS';
 export const QUESTIONS_FAILURE = 'QUESTIONS_FAILURE';
 export const START_QUIZ        = 'START_QUIZ';
 export const NEXT_QUESTION     = 'NEXT_QUESTION';
+export const RESET_GAME        = 'RESET_GAME';
