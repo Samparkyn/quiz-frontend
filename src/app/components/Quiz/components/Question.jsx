@@ -1,7 +1,7 @@
-import React, { PropTypes, Component }           from 'react';
-import { connect }                               from 'react-redux';
-import { getQuestions, nextQuestion, startQuiz } from '../state/actions';
-import { push, replace }                         from 'react-router-redux';
+import React, { PropTypes, Component } from 'react';
+import { connect }                     from 'react-redux';
+import { getQuestions, nextQuestion }  from '../state/actions';
+import { push }                        from 'react-router-redux';
 
 export class Question extends Component {
   
