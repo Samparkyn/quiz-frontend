@@ -17,7 +17,6 @@ export function getQuestions() {
       console.error(error);
       dispatch(questionsFailure(error));
     });
-    
   };
 }
 

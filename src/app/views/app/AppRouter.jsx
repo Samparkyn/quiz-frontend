@@ -1,11 +1,9 @@
 'use strict';
 
-import React, { PropTypes, Component }  from 'react';
-import { Router, Route } from 'react-router';
-import WelcomeScreen from '../../components/Quiz/components/WelcomeScreen';
-import Question from '../../components/Quiz/components/Question';
-
-import AppBody from './AppBody';
+import React, { PropTypes, Component } from 'react';
+import { Router, Route, Redirect }     from 'react-router';
+import WelcomeScreen                   from '../../components/Quiz/components/WelcomeScreen';
+import Question                        from '../../components/Quiz/components/Question';
 
 export default class AppRouter extends Component {
   
@@ -24,10 +22,9 @@ export default class AppRouter extends Component {
     
     return (
       <Router history={history}>
-        <Route path="/" component={AppBody}>
-          <Route path="/quiz" component={WelcomeScreen} />
-          <Route path="/quiz/question/:id" component={Question} />
-        </Route>
+        <Redirect from="/" to="/quiz" />
+        <Route path="/quiz" component={WelcomeScreen} />
+        <Route path="/quiz/question/:id" component={Question} />
       </Router>
     );
   }
