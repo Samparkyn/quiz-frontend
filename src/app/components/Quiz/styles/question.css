@@ -18,3 +18,10 @@
   font-weight: 300;
   margin: 15px 0;
 }
+
+.error {
+  color: red;
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
