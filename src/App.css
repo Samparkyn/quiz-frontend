@@ -2,3 +2,4 @@
 @import './app/styles/base';
 @import './app/components/Quiz/styles/question.css';
 @import './app/components/Quiz/styles/results.css';
+@import './app/components/Quiz/styles/welcome.css';
