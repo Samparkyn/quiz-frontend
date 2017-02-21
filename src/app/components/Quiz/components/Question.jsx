@@ -43,12 +43,14 @@ export class Question extends Component {
     }
 
     const questionObj = questions[currentQuestion];
-    const question = <div>{questionObj.question}</div>;
-    const answers = questionObj.answers.map((answer, idx) => {
+    
+    const question = <div  className="question">{questionObj.question}</div>;
+    const answerRows = questionObj.answers.map((answer, idx) => {
       const checked = selectedAnswer === idx;
       return (
-        <label key={idx}>
+        <label key={idx} className="answer-row">
           <input
+            className="checkbox"
             type="checkbox"
             checked={checked}
             onChange={this.inputHandler}
@@ -58,12 +60,21 @@ export class Question extends Component {
       );
     });
     
+    const answers = (
+      <div className="answers">
+        {answerRows}
+      </div>
+    );
+    
+    const nextBtn = <button className="nxt-btn">Next</button>;
+    const score = <p>{`Points so far: ${currentScore}`}</p>;
+    
     return (
-      <div className="quiz ui-box">
-        <p>{`Points so far: ${currentScore}`}</p>
+      <div className="ui-box question-container">
+        {score}
         {question}
         {answers}
-        <button className="nxt-btn">Next</button>
+        {nextBtn}
       </div>
     );
   }

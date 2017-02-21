@@ -21,7 +21,7 @@ export class WelcomeScreen extends Component {
   
   render() {
     return (
-      <div className="ui-box quiz">
+      <div className="ui-box welcome-screen">
         <h1>Welcome to the Cash Flow Quiz!</h1>
         <p>What is your name?</p>
         <input ref="name"></input>

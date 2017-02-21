@@ -1,2 +1,3 @@
 @import './app/styles/_variables';
 @import './app/styles/base';
+@import './app/components/Quiz/styles/question.css';

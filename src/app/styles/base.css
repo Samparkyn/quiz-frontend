@@ -1,4 +1,3 @@
-
 html {
   font-size: var(--font-size-base);
   height: 100%;
@@ -32,4 +31,17 @@ body {
   padding: 25px;
   background-color: #F0F8FF;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.nxt-btn {
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #FFF;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.nxt-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
